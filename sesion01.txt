@@ -1,2 +1,65 @@
 hola mundo
 prueba 1 recordando comandos
+
+
+✅ PASO 1: Verifica que Git está instalado
+
+En la terminal de VS Code escribe: git --version
+Si te aparece un número de versión, perfecto.
+
+Si no está instalado → descárgalo aquí: https://git-scm.com/downloads
+
+✅ PASO 2: Inicia Git dentro de tu carpeta de proyecto
+
+Abre tu proyecto en VS Code y en la terminal:
+git init
+Esto crea una carpeta .git y marca tu proyecto como repositorio local.
+
+✅ PASO 3: Configura tu identidad (solo la primera vez)
+
+Si nunca configuraste tu usuario en Git, coloca:
+git config --global user.name "Tu Nombre"
+git config --global user.email "tu_correo_de_github@example.com"
+
+✅ PASO 4: Crea un repositorio en GitHub
+
+Ve a GitHub → https://github.com
+Haz clic en New repository
+Pon un nombre (ej: mi-proyecto)
+No agregues README todavía (evita conflictos)
+Clic en Create repository
+GitHub te mostrará instrucciones como esta:
+git remote add origin https://github.com/tuusuario/mi-proyecto.git
+
+✅ PASO 5: Conecta tu proyecto local con GitHub
+
+En tu terminal de VS Code ejecuta:
+git remote add origin https://github.com/tuusuario/mi-proyecto.git
+
+Para comprobar: git remote -v
+
+✅ PASO 6: Sube tus archivos por primera vez
+
+Ejecuta:
+git add .
+git commit -m "Primer commit"
+git branch -M main
+git push -u origin main
+
+Te pedirá autenticarte con GitHub:
+🔑 Usa tu token personal (PAT), no tu contraseña.
+
+Si no tienes un token:
+
+https://github.com/settings/tokens
+Crear un Fine-grained token con permisos de repo
+Copiar y usar como contraseña en el push.
+
+✅ PASO 7: Subir cambios en adelante
+
+Cuando vuelvas a trabajar, solo usa:
+git add .
+git commit -m "Descripción del cambio"
+git push
+
+Y se subirá directo a tu repositorio GitHub ✅
